@@ -1,6 +1,6 @@
 ##Module to caculate an inverse of a matrix with result cached
 
-## A Cachemartix vector that stores matrix and its inverse with getter and setter 
+## Function makeCacheMatrix creates a Cachemartix vector that stores matrix and its inverse with getter and setter
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -17,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## get inverse for cachematrix x either by reading cache or new calculation
+##Function cacheSolve - get inverse of a matrix x either by reading cache or new calculation. 
+## In the latter case it will also store the result in cache
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
